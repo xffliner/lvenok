@@ -134,24 +134,20 @@ FANPAGE</a>
 <div id="mainLoop">
 
 
-<iframe
-    src="https://player.twitch.tv/lvenook_juul"
-    height="350"
-    width="600"
-    
-    scrolling="no"
-    allowfullscreen="true">
-</iframe>
+<!-- Add a placeholder for the Twitch embed -->
+<div id="twitch-embed"></div>
 
-<iframe 
-src="https://player.twitch.tv/?channel=lvenok_juul&parent=juultwitch.tv"
- frameborder="0" 
-  allowfullscreen="true" 
-   scrolling="no" 
-    height="350" 
-     width="600">
-     	
-</iframe>
+<!-- Load the Twitch embed script -->
+<script src="https://player.twitch.tv/js/embed/v1.js"></script>
+
+<!-- Create a Twitch.Player object. This will render within the placeholder div -->
+<script type="text/javascript">
+  new Twitch.Player("twitch-embed", {
+     width: 50%,
+        height: 50%,
+    channel: "lvenok_juul"
+  });
+</script>
 
 
 <div id="nav-below" class="navigation">
